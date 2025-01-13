@@ -6,9 +6,9 @@ export default function ProductLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body>
-        <div className="px-6 sm:pl-[2.44rem] sm:pr-10 lg:px-[10.31rem]">
+        <div className="">
           {children}
           <BestGear />
         </div>

@@ -4,7 +4,7 @@ import BestGearTab from "../../public/assets/shared/tablet/image-best-gear.jpg";
 import BestGeardesk from "../../public/assets/shared/desktop/image-best-gear.jpg";
 export default function BestGear() {
   return (
-    <div className="flex flex-col gap-y-8 sm:gap-y-12 lg:gap-x-20 items-center justify-center lg:justify-between lg:flex-row-reverse">
+    <div className="flex flex-col gap-y-8 sm:gap-y-12 lg:gap-x-20 items-center justify-center lg:justify-between lg:flex-row-reverse px-6 sm:pl-[2.44rem] sm:pr-10 lg:px-[10.31rem]">
       <picture>
         <source media="(min-width:768px)" srcSet={BestGeardesk.src} />
         <source media="(min-width:1024px)" srcSet={BestGearTab.src} />
