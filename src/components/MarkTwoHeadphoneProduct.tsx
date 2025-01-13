@@ -5,7 +5,7 @@ async function getProduct() {
   const res = await fetch('http://localhost:4000/3')
   return res.json()
 }
-export default async function MarkTwoHeadphone() {
+export default async function MarkTwoHeadphoneProduct() {
   const products = await getProduct()
   return (
     <div className="">
@@ -16,7 +16,9 @@ export default async function MarkTwoHeadphone() {
       <p className="">
         {products.description}
       </p>
-      <Button asChild><Link href="/products/xx99-mark-two-headphone">see product</Link></Button>
+      <Button asChild>
+        <Link href="/products/xx99-mark-two-headphone">see product</Link>
+      </Button>
     </div>
   );
 }
