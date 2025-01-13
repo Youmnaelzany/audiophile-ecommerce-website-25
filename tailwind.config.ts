@@ -7,7 +7,16 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
+	theme: {
+		colors: {
+			'orange': '#D87D4A',
+			'light-orange': '#FBAF85',
+			'black': '#000000',
+			'light-black': '#101010',
+			'white': '#FFFFFF',
+			'off-white': '#FAFAFA',
+			'light-grey': '#F1F1F1',
+		},
   	extend: {
   		colors: {
   			background: 'hsl(var(--background))',
