@@ -16,6 +16,7 @@ export default {
 			'white': '#FFFFFF',
 			'off-white': '#FAFAFA',
 			'light-grey': '#F1F1F1',
+			'grey': '#CFCFCF',
 		},
   	extend: {
   		colors: {
