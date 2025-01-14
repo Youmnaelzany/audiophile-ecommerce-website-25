@@ -1,4 +1,5 @@
 import BestGear from "@/components/BestGear";
+import Header from "@/components/Header";
 
 export default function ProductLayout({
   children,
@@ -8,6 +9,7 @@ export default function ProductLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+        <Header color="black" />
         <div className="">
           {children}
           <BestGear />
