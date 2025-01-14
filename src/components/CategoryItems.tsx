@@ -26,9 +26,9 @@ const MyCategory = ({ name, link, categoryImg }: { name: string, link: string, c
 export default function CategoryItems() {
   return (
     <section className="px-6 sm:pl-[2.44rem] sm:pr-10 lg:px-[10.31rem] flex flex-col gap-24 sm:flex-row sm:gap-x-[0.69rem] lg:gap-x-[1.88rem] items-center justify-center sm:justify-between">
-      <MyCategory name="Headphones" link="/headphones" categoryImg={HeadPhones} />
-      <MyCategory name="Speakers" link="/speakers" categoryImg={Speakers} />
-      <MyCategory name="Earphones" link="/earphones" categoryImg={EarPhones} />
+      <MyCategory name="Headphones" link="/category/headphones" categoryImg={HeadPhones} />
+      <MyCategory name="Speakers" link="/category/speakers" categoryImg={Speakers} />
+      <MyCategory name="Earphones" link="/category/earphones" categoryImg={EarPhones} />
     </section>
   );
 }
