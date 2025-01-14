@@ -1,9 +1,10 @@
-import BestGear from "@/components/BestGear";
 
 export default function EarphoneYx1() {
   return (
     <main className="">
-      <BestGear />
+      <h1 className="">
+        EarphoneYx1
+      </h1>
     </main>
   )
 }

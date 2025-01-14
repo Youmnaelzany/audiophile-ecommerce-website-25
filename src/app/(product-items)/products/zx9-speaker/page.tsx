@@ -1,9 +1,8 @@
-import BestGear from "@/components/BestGear";
 
 export default function SpeakerZx9() {
   return (
     <main className="">
-      <BestGear />
+      <h1 className="">Speaker Zx9</h1>
     </main>
   )
 }

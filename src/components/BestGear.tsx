@@ -4,10 +4,10 @@ import BestGearTab from "../../public/assets/shared/tablet/image-best-gear.jpg";
 import BestGeardesk from "../../public/assets/shared/desktop/image-best-gear.jpg";
 export default function BestGear() {
   return (
-    <div className="flex flex-col gap-y-8 sm:gap-y-12 lg:gap-x-20 items-center justify-center lg:justify-between lg:flex-row-reverse px-6 sm:pl-[2.44rem] sm:pr-10 lg:px-[10.31rem]">
+    <div className="flex flex-col gap-y-8 sm:gap-y-12 lg:gap-x-20 items-center justify-center lg:justify-between lg:flex-row-reverse px-6 sm:pl-[2.44rem] sm:pr-10 lg:px-[10.31rem] py-[7.5rem] lg:py-40">
       <picture>
-        <source media="(min-width:768px)" srcSet={BestGeardesk.src} />
-        <source media="(min-width:1024px)" srcSet={BestGearTab.src} />
+        <source media="(min-width:1024px)" srcSet={BestGeardesk.src} />
+        <source media="(min-width:768px)" srcSet={BestGearTab.src} />
         <Image src={BestGearMob} alt="Best Audio Gear" className="rounded-lg" />
       </picture>
       <div className="space-y-8 flex flex-col items-center justify-center text-center lg:text-left lg:items-start lg:justify-start w-[20.4375rem] sm:w-[35.8125rem] lg:w-[29.8125rem]">

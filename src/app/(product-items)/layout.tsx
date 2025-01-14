@@ -6,7 +6,7 @@ export default function ProductLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
         <div className="">
           {children}

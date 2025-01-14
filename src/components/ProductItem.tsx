@@ -1,9 +1,27 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 
-export default function ProductItem({ name, description, categoryImageDesk, newItem, link, categoryImageTablet, categoryImageMobile }: { name: string, description: string, categoryImageDesk: string, newItem?: string, link: string, categoryImageTablet: string, categoryImageMobile: string }) {
+interface Props {
+  name: string,
+  description: string,
+  categoryImageDesk: string,
+  newItem?: string,
+  link: string,
+  categoryImageTablet: string,
+  categoryImageMobile: string
+  direction: "left"| "right"
+}
+
+const divDirection = {
+  left: "lg:flex-row-reverse",
+  right: "lg:flex-row"
+}
+
+
+export default function ProductItem({ name, description, categoryImageDesk, newItem, link, categoryImageTablet, categoryImageMobile, direction }: Props) {
+  const directionClass = divDirection[direction];
   return (
-    <div className="flex flex-col lg:flex-row gap-y-8 sm:gap-y-[3.25rem] lg:gap-x-[7.81rem] items-center justify-center lg:justify-between">
+    <div className={`flex flex-col gap-y-8 sm:gap-y-[3.25rem] lg:gap-x-[7.81rem] items-center justify-center lg:justify-between ${directionClass}`}>
       <picture>
         <source media="(min-width:1024px)" srcSet={categoryImageDesk} />
         <source media="(min-width:768px)" srcSet={categoryImageTablet} />

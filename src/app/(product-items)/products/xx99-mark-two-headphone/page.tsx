@@ -1,9 +1,8 @@
-import BestGear from "@/components/BestGear";
 
 export default function HeadphoneXx99MarkTwo() {
   return (
     <main className="">
-      <BestGear />
+      <h1 className="">HeadphoneXx99MarkTwo</h1>
     </main>
   )
 }
