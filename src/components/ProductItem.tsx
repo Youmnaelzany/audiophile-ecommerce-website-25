@@ -9,7 +9,7 @@ interface Props {
   link: string,
   categoryImageTablet: string,
   categoryImageMobile: string
-  direction: "left"| "right"
+  direction: "left" | "right"
 }
 
 const divDirection = {
@@ -25,7 +25,7 @@ export default function ProductItem({ name, description, categoryImageDesk, newI
       <picture>
         <source media="(min-width:1024px)" srcSet={categoryImageDesk} />
         <source media="(min-width:768px)" srcSet={categoryImageTablet} />
-        <img src={categoryImageMobile} alt={name}  className="flex-1 rounded-lg" />
+        <img src={categoryImageMobile} alt={name} className="flex-1 rounded-lg" />
       </picture>
       <div className="flex flex-col items-center justify-center text-center lg:text-left lg:items-start lg:justify-start gap-y-6 sm:gap-y-4 flex-1">
         <span className="text-orange text-sm font-normal leading-normal uppercase tracking-[0.625rem]">{newItem}</span>
@@ -41,6 +41,6 @@ export default function ProductItem({ name, description, categoryImageDesk, newI
           <Link href={link}>see product</Link>
         </Button>
       </div>
-    </div> 
+    </div>
   );
 }
