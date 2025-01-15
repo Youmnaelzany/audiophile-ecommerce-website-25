@@ -1,3 +1,6 @@
+export const metadata = {
+  title: "XX99 Mark II Headphones | Audiophile",
+};
 
 export default function HeadphoneXx99MarkTwo() {
   return (

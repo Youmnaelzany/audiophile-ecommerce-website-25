@@ -2,6 +2,11 @@ import CategoryItems from "@/components/CategoryItems";
 import EarphonesCategory from "@/components/EarphonesCategory";
 import ProductTitle from "@/components/ProductTitle";
 
+export const metadata = {
+  title: "Earphones | Audiophile",
+};
+
+
 export default function EarphonesHomePage() {
   return (
     <main className="">

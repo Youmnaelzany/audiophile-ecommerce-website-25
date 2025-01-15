@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "YX1 Wireless Earphones | Audiophile",
+};
+
 
 export default function EarphoneYx1() {
   return (

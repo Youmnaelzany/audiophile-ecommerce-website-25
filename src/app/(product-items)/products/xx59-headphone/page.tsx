@@ -1,4 +1,9 @@
 
+export const metadata = {
+  title: "XX59 Headphones | Audiophile",
+};
+
+
 export default function HeadphoneXx59() {
   return (
     <main className="">

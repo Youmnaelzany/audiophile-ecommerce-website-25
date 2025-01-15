@@ -22,11 +22,11 @@ export default async function HeadphonesCategory() {
     <section className="px-6 sm:pl-[2.44rem] sm:pr-10 lg:px-[10.31rem] space-y-[7.5rem] lg:space-y-40 mt-16 mb-28 sm:mt-[7.5rem] sm:mb-32 lg:my-40">
       {/* xx99-mark-two-headphones */}
       <ProductItem name={productsThree.name} description={productsThree.description} categoryImageDesk={productsThree.categoryImage.desktop}
-        newItem="NEW PRODUCT" link="/products/xx99-mark-two-headphones"
+        newItem="NEW PRODUCT" link="/products/xx99-mark-two-headphone"
         categoryImageTablet={productsThree.categoryImage.tablet} categoryImageMobile={productsThree.categoryImage.mobile} direction="right" />
       {/* xx99-mark-one-headphones */}
       <ProductItem name={productsTwo.name} description={productsTwo.description} categoryImageDesk={productsTwo.categoryImage.desktop}
-        newItem={productsTwo.newItem} link="/products/xx99-mark-one-headphones"
+        newItem={productsTwo.newItem} link="/products/xx99-mark-one-headphone"
         categoryImageTablet={productsTwo.categoryImage.tablet} categoryImageMobile={productsTwo.categoryImage.mobile}
         direction="left"
       />

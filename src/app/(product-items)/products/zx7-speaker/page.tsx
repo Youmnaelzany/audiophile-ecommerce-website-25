@@ -1,3 +1,6 @@
+export const metadata = {
+  title: "ZX7 Speaker | Audiophile",
+};
 
 export default function SpeakerZx7() {
   return (
