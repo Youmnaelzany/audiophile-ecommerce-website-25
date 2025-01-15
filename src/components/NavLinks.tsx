@@ -2,7 +2,7 @@ import Link from "next/link";
 function LinkList({ link, linkTitle }: { link: string, linkTitle: string }) {
   return (
     <li>
-      <Link href={link} className="text-[0.8125rem] text-white font-bold leading-[1.5625rem] tracking-[0.125rem] uppercase">{linkTitle}</Link>
+      <Link href={link} className="text-[0.8125rem] text-white font-bold leading-[1.5625rem] tracking-[0.125rem] uppercase hover:text-orange transition-colors duration-300 ease-in-out">{linkTitle}</Link>
     </li>
 
   );

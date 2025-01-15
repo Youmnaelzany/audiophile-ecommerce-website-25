@@ -11,11 +11,11 @@ import CategoryItems from "./CategoryItems";
 export default function MobileMenu() {
   return (
     <div className="lg:hidden">
-      <Sheet>
+      <Sheet >
         <SheetTrigger>
           <Menu className=" text-white" size={30} />
         </SheetTrigger>
-        <SheetContent side={"top"}>
+        <SheetContent side={"top"} className="py-10 pt-24 flex items-center justify-center">
           <CategoryItems />
         </SheetContent>
       </Sheet>

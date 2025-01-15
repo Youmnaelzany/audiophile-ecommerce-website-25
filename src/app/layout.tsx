@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${manrope.variable} box-border antialiased max-w-[90rem] max-h-dvh`}
+        className={`${manrope.variable} box-border antialiased max-w-[90rem] m-0 p-0`}
       >
         {children}
       </body>
