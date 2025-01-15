@@ -1,3 +1,4 @@
+import { url } from "inspector";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,7 +19,12 @@ export default {
 			'light-grey': '#F1F1F1',
 			'grey': '#CFCFCF',
 		},
-  	extend: {
+		extend: {
+			backgroundImage: {
+				'hero-desk': "url('../../public/assets/home/desktop/image-hero.jpg')",
+				'hero-tablet': "url('../../public/assets/home/tablet/image-header.jpg')",
+				'hero-mobile': "url('../../public/assets/home/mobile/image-header.jpg')",
+			},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
