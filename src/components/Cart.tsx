@@ -12,23 +12,31 @@ import { useCart } from "../context/CartContext";
 import CountBtn from "./CountBtn";
 
 const productsImage: { [key: number]: string } = {
-  1: "/assets/cart/image-xx99-mark-one-headphones.jpg",
-  2: "/assets/cart/image-xx99-mark-two-headphones.jpg",
-  3: "/assets/cart/image-xx59-headphones.jpg",
+  1: "/assets/cart/image-yx1-earphones.jpg",
+  2: "/assets/cart/image-xx59-headphones.jpg",
+  3: "/assets/cart/image-xx99-mark-one-headphones.jpg",
   4: "/assets/cart/image-xx99-mark-two-headphones.jpg",
-  5: "/assets/cart/image-xx99-mark-one-headphones.jpg",
-  6: "/assets/cart/image-xx59-headphones.jpg",
+  5: "/assets/cart/image-zx7-speaker.jpg",
+  6: "/assets/cart/image-zx9-speaker.jpg",
 };
 
 export default function Cart() {
   const { cart, removeItem, updateQuantity, clearCart } = useCart();
 
   const totalPrice = cart.reduce((total: number, item: { id: string; price: number; quantity: number }) => total + item.price * item.quantity, 0);
+  const totalItems = cart.reduce((total: number, item: { quantity: number; }) => total + item.quantity, 0); // Calculate total items
 
   return (
     <Dialog>
       <DialogTrigger>
-        <ShoppingCart className="text-white" size={30} />
+        <div className="relative">
+          <ShoppingCart className="text-white" size={30} />
+          {totalItems > 0 && (
+            <span className="absolute top-0 -right-8 text-orange rounded-full text-2xl font-bold px-1 size-8">
+              {totalItems}
+            </span>
+          )}
+        </div>
       </DialogTrigger>
       <DialogContent className="w-[20.4375rem] p-8 sm:w-[23.5625rem] space-y-8">
         <div className="flex items-center justify-between">
@@ -47,6 +55,8 @@ export default function Cart() {
                   src={productsImage[Number(item.id)]}
                   alt={item.name}
                   className="w-[2.26188rem] h-10 object-cover rounded-lg"
+                  width={80}
+                  height={80}
                 />
                 <div className="">
                   <h3 className="text-[0.9375rem] text-black font-bold leading-[1.5625rem]">{item.name}</h3>
@@ -68,3 +78,11 @@ export default function Cart() {
     </Dialog>
   );
 }
+
+
+
+
+
+
+
+

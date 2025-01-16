@@ -3,6 +3,7 @@ import CategoryItems from "@/components/CategoryItems";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { CartProvider } from "@/context/CartContext";
+import { Toaster } from "@/components/ui/toaster"
 
 export default function ProductLayout({
   children,
@@ -15,10 +16,11 @@ export default function ProductLayout({
         <CartProvider>
         <Header color="black" />
         <div className="">
+          <Toaster /> {/* Render the Toaster here */}
           {children}
           <CategoryItems />
           <BestGear />
-        </div>
+          </div>
           <Footer />
           </CartProvider>
       </body>

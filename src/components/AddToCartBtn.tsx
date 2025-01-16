@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { useCart } from "../context/CartContext";
+import { toast } from "../hooks/use-toast"; // Import the toast function
 
 interface Product {
   id: number;
@@ -19,6 +20,7 @@ export default function AddToCartBtn({ product }: { product: Product }) {
 
   const handleAddToCart = () => {
     addItem({ ...product, quantity: count });
+    toast({ title: `${product.name} added to cart!`, description: `Quantity: ${count}` }); // Show toast notification
   };
 
   return (
@@ -28,7 +30,9 @@ export default function AddToCartBtn({ product }: { product: Product }) {
         <button className="text-[0.8125rem] text-black font-bold uppercase leading-normal tracking-[0.0625rem]">{count}</button>
         <button onClick={incrementCount} className="text-[0.8125rem] text-black/25 font-bold uppercase leading-normal tracking-[0.0625rem] hover:text-orange transition-colors duration-300 ease-in-out">+</button>
       </div>
-      <Button type="button" onClick={handleAddToCart}>Add To Cart</Button>
+      <Button type="button" onClick={handleAddToCart}>
+        Add To Cart
+      </Button>
     </div>
   );
 }
