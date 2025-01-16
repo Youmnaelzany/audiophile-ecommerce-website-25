@@ -1,16 +1,15 @@
 "use client";
-
-import { ShoppingCart } from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
-import { useCart } from "../context/CartContext";
-import CountBtn from "./CountBtn";
 import {
   Dialog,
   DialogContent,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { ShoppingCart } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { useCart } from "../context/CartContext";
+import CountBtn from "./CountBtn";
 
 export default function Cart() {
   const { cart, removeItem, updateQuantity, clearCart } = useCart();

@@ -7,7 +7,7 @@ interface Product {
   id: number;
   name: string;
   price: number;
-  // Add other properties of the product as needed
+  // Add other product properties here
 }
 
 export default function AddToCartBtn({ product }: { product: Product }) {

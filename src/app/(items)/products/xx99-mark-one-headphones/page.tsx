@@ -1,22 +1,22 @@
 import AddToCartBtn from '@/components/AddToCartBtn';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { CartProvider } from '../../../../context/CartContext';
+
 
 export const metadata = {
-  title: "XX99 Mark II Headphones | Audiophile",
+  title: "XX99 Mark I Headphones | Audiophile",
 };
 
 async function getProduct() {
-  const res = await fetch('http://localhost:4000/3')
+  const res = await fetch('http://localhost:4000/2')
   return res.json()
 }
 
-export default async function HeadphoneXx99MarkTwo() {
+
+export default async function HeadphoneXx99MarkOne() {
   const product = await getProduct();
 
-  return (
-    <CartProvider>
+  return (   
     <main className="px-6 sm:pl-[2.44rem] sm:pr-10 lg:px-[10.31rem] pt-4 sm:pt-8 lg:pt-20">
       <div>
         <Link href="/products/zx7-speaker" className='text-black/50 text-[0.9375rem] leading-[1.5625rem] font-normal'>
@@ -62,7 +62,6 @@ export default async function HeadphoneXx99MarkTwo() {
               <h3 className="text-black/50 text-[0.9375rem] font-normal leading-[1.5625rem]"><span className="text-orange mr-6">{product.includes[1].quantity}x</span>{product.includes[1].item}</h3>
               <h3 className="text-black/50 text-[0.9375rem] font-normal leading-[1.5625rem]"><span className="text-orange mr-6">{product.includes[2].quantity}x</span>{product.includes[2].item}</h3>
               <h3 className="text-black/50 text-[0.9375rem] font-normal leading-[1.5625rem]"><span className="text-orange mr-6">{product.includes[3].quantity}x</span>{product.includes[3].item}</h3>
-              <h3 className="text-black/50 text-[0.9375rem] font-normal leading-[1.5625rem]"><span className="text-orange mr-6">{product.includes[4].quantity}x</span>{product.includes[4].item}</h3>
             </div>
           </div>
         </div>
@@ -127,7 +126,6 @@ export default async function HeadphoneXx99MarkTwo() {
           </div>
         </div>
       </section>
-    </main>
-      </CartProvider>
+      </main>  
   )
 }

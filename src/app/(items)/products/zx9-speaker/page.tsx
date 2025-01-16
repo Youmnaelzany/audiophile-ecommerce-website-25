@@ -1,21 +1,21 @@
 import AddToCartBtn from '@/components/AddToCartBtn';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { CartProvider } from '../../../../context/CartContext';
 
 export const metadata = {
-  title: "YX1 Wireless Earphones | Audiophile",
+  title: "ZX9 Speaker | Audiophile",
 };
 
 async function getProduct() {
-  const res = await fetch('http://localhost:4000/0')
+  const res = await fetch('http://localhost:4000/5')
   return res.json()
 }
 
-export default async function EarphoneYx1() {
+
+export default async function SpeakerZx9() {
   const product = await getProduct();
+
   return (
-    <CartProvider>
 
     <main className="px-6 sm:pl-[2.44rem] sm:pr-10 lg:px-[10.31rem] pt-4 sm:pt-8 lg:pt-20">
       <div>
@@ -128,7 +128,6 @@ export default async function EarphoneYx1() {
         </div>
       </section>
       </main>
-    </CartProvider>
-
+      
   )
 }

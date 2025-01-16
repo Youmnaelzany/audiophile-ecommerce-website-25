@@ -1,25 +1,21 @@
 import AddToCartBtn from '@/components/AddToCartBtn';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { CartProvider } from '../../../../context/CartContext';
-
 
 export const metadata = {
-  title: "ZX7 Speaker | Audiophile",
+  title: "XX99 Mark II Headphones | Audiophile",
 };
 
 async function getProduct() {
-  const res = await fetch('http://localhost:4000/4')
+  const res = await fetch('http://localhost:4000/3')
   return res.json()
 }
 
-
-export default async function SpeakerZx7() {
+export default async function HeadphoneXx99MarkTwo() {
   const product = await getProduct();
 
   return (
-    <CartProvider>
-
+   
     <main className="px-6 sm:pl-[2.44rem] sm:pr-10 lg:px-[10.31rem] pt-4 sm:pt-8 lg:pt-20">
       <div>
         <Link href="/products/zx7-speaker" className='text-black/50 text-[0.9375rem] leading-[1.5625rem] font-normal'>
@@ -131,6 +127,6 @@ export default async function SpeakerZx7() {
         </div>
       </section>
       </main>
-    </CartProvider>
+      
   )
 }

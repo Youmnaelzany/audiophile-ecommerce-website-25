@@ -1,23 +1,21 @@
 import AddToCartBtn from '@/components/AddToCartBtn';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { CartProvider } from '../../../../context/CartContext';
 
 export const metadata = {
-  title: "ZX9 Speaker | Audiophile",
+  title: "XX59 Headphones | Audiophile",
 };
 
 async function getProduct() {
-  const res = await fetch('http://localhost:4000/5')
+  const res = await fetch('http://localhost:4000/1')
   return res.json()
 }
 
 
-export default async function SpeakerZx9() {
+export default async function HeadphoneXx59() {
   const product = await getProduct();
 
   return (
-    <CartProvider>
 
     <main className="px-6 sm:pl-[2.44rem] sm:pr-10 lg:px-[10.31rem] pt-4 sm:pt-8 lg:pt-20">
       <div>
@@ -45,7 +43,7 @@ export default async function SpeakerZx9() {
             {/* Price */}
             <h3 className="text-lg font-bold leading-normal uppercase tracking-[0.08038rem] text-black">${product.price}</h3>
             {/* Add to cart Btn */}
-            <AddToCartBtn product={product} />
+              <AddToCartBtn product={product} />
           </div>
         </div>
         {/* Features & In the Box */}
@@ -64,7 +62,6 @@ export default async function SpeakerZx9() {
               <h3 className="text-black/50 text-[0.9375rem] font-normal leading-[1.5625rem]"><span className="text-orange mr-6">{product.includes[1].quantity}x</span>{product.includes[1].item}</h3>
               <h3 className="text-black/50 text-[0.9375rem] font-normal leading-[1.5625rem]"><span className="text-orange mr-6">{product.includes[2].quantity}x</span>{product.includes[2].item}</h3>
               <h3 className="text-black/50 text-[0.9375rem] font-normal leading-[1.5625rem]"><span className="text-orange mr-6">{product.includes[3].quantity}x</span>{product.includes[3].item}</h3>
-              <h3 className="text-black/50 text-[0.9375rem] font-normal leading-[1.5625rem]"><span className="text-orange mr-6">{product.includes[4].quantity}x</span>{product.includes[4].item}</h3>
             </div>
           </div>
         </div>
@@ -130,6 +127,7 @@ export default async function SpeakerZx9() {
         </div>
       </section>
       </main>
-    </CartProvider>
+
   )
+
 }

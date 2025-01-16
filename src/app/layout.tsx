@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
+import { CartProvider } from "@/context/CartContext";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -22,8 +23,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${manrope.variable} box-border antialiased max-w-[90rem] m-0 p-0`}
-      >
+        >
+        <CartProvider>
         {children}
+          </CartProvider>
       </body>
     </html>
   );

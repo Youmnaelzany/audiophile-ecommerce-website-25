@@ -9,7 +9,7 @@ interface Item {
 type UpdateQuantity = (id: string, quantity: number) => void;
 type RemoveItem = (id: string) => void;
 
-export default function CountBtn({ item, updateQuantity, removeItem } : { item: Item, updateQuantity: UpdateQuantity, removeItem: RemoveItem }) {
+export default function CountBtn({ item, updateQuantity, removeItem }: { item: Item, updateQuantity: UpdateQuantity, removeItem: RemoveItem }) {
   const [count, setCount] = useState(item.quantity);
 
   const incrementCount = () => {
