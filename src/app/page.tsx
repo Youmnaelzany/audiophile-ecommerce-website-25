@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-
 export const metadata = {
   title: "Home | Audiophile",
 };
@@ -27,7 +26,7 @@ export default function Home() {
             Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
           </p>
           <Button asChild>
-            <Link href="/products/product-xx99-mark-two-headphones">
+              <Link href="/products/xx99-mark-two-headphones">
               See Product
             </Link>
           </Button>

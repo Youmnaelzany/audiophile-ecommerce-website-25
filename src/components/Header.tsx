@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ShoppingCart } from "lucide-react";
 import Logo from "../../public/assets/shared/desktop/logo.svg"
 import NavLinks from "./NavLinks";
 import MobileMenu from "./MobileMenu";
+import Cart from "./Cart";
 
 interface Props {
   color: 'lightBlack' | 'black';
@@ -26,7 +26,7 @@ export default function Header({ color }: Props) {
       <nav className="hidden lg:block">
         <NavLinks />
       </nav>
-      <ShoppingCart className="text-white" size={30} />
+      <Cart />
     </header>
   );
 }

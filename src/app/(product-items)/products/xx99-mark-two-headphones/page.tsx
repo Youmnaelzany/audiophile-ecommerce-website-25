@@ -1,6 +1,7 @@
 import AddToCartBtn from '@/components/AddToCartBtn';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { CartProvider } from '../../../../context/CartContext';
 
 export const metadata = {
   title: "XX99 Mark II Headphones | Audiophile",
@@ -15,6 +16,7 @@ export default async function HeadphoneXx99MarkTwo() {
   const product = await getProduct();
 
   return (
+    <CartProvider>
     <main className="px-6 sm:pl-[2.44rem] sm:pr-10 lg:px-[10.31rem] pt-4 sm:pt-8 lg:pt-20">
       <div>
         <Link href="/products/zx7-speaker" className='text-black/50 text-[0.9375rem] leading-[1.5625rem] font-normal'>
@@ -41,7 +43,7 @@ export default async function HeadphoneXx99MarkTwo() {
             {/* Price */}
             <h3 className="text-lg font-bold leading-normal uppercase tracking-[0.08038rem] text-black">${product.price}</h3>
             {/* Add to cart Btn */}
-            <AddToCartBtn />
+            <AddToCartBtn product={product} />
           </div>
         </div>
         {/* Features & In the Box */}
@@ -126,7 +128,6 @@ export default async function HeadphoneXx99MarkTwo() {
         </div>
       </section>
     </main>
+      </CartProvider>
   )
-
-
 }
