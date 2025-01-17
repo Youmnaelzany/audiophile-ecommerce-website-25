@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useContext, useReducer } from 'react';
+import { createContext, useContext, useReducer, useEffect } from 'react';
 
 const CartContext = createContext();
 
@@ -32,7 +32,11 @@ const cartReducer = (state, action) => {
 };
 
 export const CartProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(cartReducer, []);
+  const [state, dispatch] = useReducer(cartReducer, JSON.parse(localStorage.getItem('cart')) || []);
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(state));
+  }, [state]);
 
   const addItem = item => dispatch({ type: 'ADD_ITEM', payload: item });
   const removeItem = id => dispatch({ type: 'REMOVE_ITEM', payload: { id } });
