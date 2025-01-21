@@ -10,7 +10,7 @@ export default function CheckoutHomePage() {
   return (
     <>
       <Header color="black" />
-      <main>
+      <main className="px-6 sm:pl-[2.44rem] sm:pr-10 lg:px-[10.31rem]">
         <Checkout/>
       </main>
       <Footer />
